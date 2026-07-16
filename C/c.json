@@ -1,0 +1,302 @@
+{
+    "Main": {
+        "prefix": "main",
+        "body": [
+            "#include <stdio.h>",
+            "",
+            "int main(void)",
+            "{",
+            "\t$0",
+            "\treturn 0;",
+            "}"
+        ],
+        "description": "Main function"
+    },
+
+    "Function": {
+        "prefix": "func",
+        "body": [
+            "${1:void} ${2:function_name}(${3:void})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Function definition"
+    },
+
+    "Struct": {
+        "prefix": "struct",
+        "body": [
+            "typedef struct",
+            "{",
+            "\t$1",
+            "} ${2:Name};"
+        ],
+        "description": "Struct"
+    },
+
+    "Enum": {
+        "prefix": "enum",
+        "body": [
+            "typedef enum",
+            "{",
+            "\t${1:VALUE1},",
+            "\t${2:VALUE2}",
+            "} ${3:Name};"
+        ],
+        "description": "Enum"
+    },
+
+    "If": {
+        "prefix": "if",
+        "body": [
+            "if (${1:condition})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "If statement"
+    },
+
+    "If Else": {
+        "prefix": "ife",
+        "body": [
+            "if (${1:condition})",
+            "{",
+            "\t$2",
+            "}",
+            "else",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "If else"
+    },
+
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "For loop"
+    },
+
+    "While Loop": {
+        "prefix": "while",
+        "body": [
+            "while (${1:condition})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "While loop"
+    },
+
+    "Do While": {
+        "prefix": "dowhile",
+        "body": [
+            "do",
+            "{",
+            "\t$0",
+            "} while (${1:condition});"
+        ],
+        "description": "Do while"
+    },
+
+    "Switch": {
+        "prefix": "switch",
+        "body": [
+            "switch (${1:value})",
+            "{",
+            "\tcase ${2:0}:",
+            "\t\t$3",
+            "\t\tbreak;",
+            "",
+            "\tdefault:",
+            "\t\tbreak;",
+            "}"
+        ],
+        "description": "Switch statement"
+    },
+
+    "Printf": {
+        "prefix": "printf",
+        "body": [
+            "printf(\"${1:%d}\\n\", ${2:value});"
+        ],
+        "description": "printf"
+    },
+
+    "Scanf": {
+        "prefix": "scanf",
+        "body": [
+            "scanf(\"${1:%d}\", &${2:variable});"
+        ],
+        "description": "scanf"
+    },
+
+    "Malloc": {
+        "prefix": "malloc",
+        "body": [
+            "${1:type} *${2:ptr} = malloc(sizeof(${1:type}) * ${3:count});",
+            "if (${2:ptr} == NULL)",
+            "{",
+            "\tperror(\"malloc\");",
+            "\texit(EXIT_FAILURE);",
+            "}"
+        ],
+        "description": "Safe malloc"
+    },
+
+    "Calloc": {
+        "prefix": "calloc",
+        "body": [
+            "${1:type} *${2:ptr} = calloc(${3:count}, sizeof(${1:type}));",
+            "if (${2:ptr} == NULL)",
+            "{",
+            "\tperror(\"calloc\");",
+            "\texit(EXIT_FAILURE);",
+            "}"
+        ],
+        "description": "Safe calloc"
+    },
+
+    "Free": {
+        "prefix": "free",
+        "body": [
+            "free(${1:ptr});",
+            "${1:ptr} = NULL;"
+        ],
+        "description": "Safe free"
+    },
+
+    "Open File": {
+        "prefix": "fopen",
+        "body": [
+            "FILE *fp = fopen(\"${1:file.txt}\", \"${2:r}\");",
+            "if (fp == NULL)",
+            "{",
+            "\tperror(\"fopen\");",
+            "\treturn EXIT_FAILURE;",
+            "}"
+        ],
+        "description": "Open file safely"
+    },
+
+    "Close File": {
+        "prefix": "fclose",
+        "body": [
+            "fclose(${1:fp});"
+        ],
+        "description": "Close file"
+    },
+
+    "Read Line": {
+        "prefix": "fgets",
+        "body": [
+            "char ${1:buffer}[${2:1024}];",
+            "if (fgets(${1:buffer}, sizeof(${1:buffer}), ${3:stdin}) == NULL)",
+            "{",
+            "\treturn;",
+            "}"
+        ],
+        "description": "Read line"
+    },
+
+    "Error Check": {
+        "prefix": "check",
+        "body": [
+            "if (${1:condition})",
+            "{",
+            "\tfprintf(stderr, \"Error: ${2:message}\\n\");",
+            "\treturn ${3:-1};",
+            "}"
+        ],
+        "description": "Error handling"
+    },
+
+    "Assert": {
+        "prefix": "assert",
+        "body": [
+            "assert(${1:condition});"
+        ],
+        "description": "Assert"
+    },
+
+    "Header Guard": {
+        "prefix": "guard",
+        "body": [
+            "#ifndef ${1:FILENAME_H}",
+            "#define ${1:FILENAME_H}",
+            "",
+            "$0",
+            "",
+            "#endif /* ${1:FILENAME_H} */"
+        ],
+        "description": "Header guard"
+    },
+
+    "Include Stdlib": {
+        "prefix": "incstd",
+        "body": [
+            "#include <stdio.h>",
+            "#include <stdlib.h>",
+            "#include <string.h>",
+            "#include <stdbool.h>",
+            "#include <stdint.h>"
+        ],
+        "description": "Common includes"
+    },
+
+    "Goto Cleanup": {
+        "prefix": "cleanup",
+        "body": [
+            "cleanup:",
+            "\tfree(${1:ptr});",
+            "\tfclose(${2:fp});",
+            "\treturn ${3:ret};"
+        ],
+        "description": "Cleanup label"
+    },
+
+    "Macro": {
+        "prefix": "define",
+        "body": [
+            "#define ${1:NAME} ${2:VALUE}"
+        ],
+        "description": "Macro"
+    },
+
+    "Inline Function": {
+        "prefix": "inline",
+        "body": [
+            "static inline ${1:int} ${2:name}(${3:void})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Inline function"
+    },
+
+    "Static Function": {
+        "prefix": "static",
+        "body": [
+            "static ${1:void} ${2:name}(${3:void})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Static function"
+    },
+
+    "TODO": {
+        "prefix": "todo",
+        "body": [
+            "/* TODO(${1:name}): ${2:description} */"
+        ],
+        "description": "TODO comment"
+    }
+}
