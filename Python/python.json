@@ -366,55 +366,55 @@
 	"document Function": {
 		"prefix": "defdoc",
 		"body": [
-			"\t\"\"\"",
-			"\t${4:Short summary of what the function does.}",
+			"\"\"\"",
+			"${4:Short summary of what the function does.}",
 			"",
-			"\tArgs:",
-			"\t\t${2:param1}: ${5:Description of the first parameter.}",
-			"\t\t${3:param2}: ${6:Description of the second parameter.}",
+			"Args:",
+			"\t${2:param1}: ${5:Description of the first parameter.}",
+			"\t${3:param2}: ${6:Description of the second parameter.}",
 			"",
-			"\tReturns:",
-			"\t\t${7:return_type}: ${8:Description of the return value.}",
+			"Returns:",
+			"\t${7:return_type}: ${8:Description of the return value.}",
 			"",
-			"\tRaises:",
-			"\t\t${9:ExceptionType}: ${10:When this exception is raised.}",
+			"Raises:",
+			"\t${9:ExceptionType}: ${10:When this exception is raised.}",
 			"",
-			"\tExample:",
-			"\t\t${11:result = ${1:function_name}(value1, value2)}",
-			"\t\"\"\"",
-			"\t$0"
+			"Example:",
+			"\t${11:result = ${1:function_name}(value1, value2)}",
+			"\"\"\"",
+			"$0"
 		],
 		"description": "descriptive docstrings for Functions"
 	},
 	"document Method": {
 		"prefix": "methoddoc",
 		"body": [
-			"\t\"\"\"",
-			"\t${3:Short summary of what the method does.}",
+			"\"\"\"",
+			"${3:Short summary of what the method does.}",
 			"",
-			"\tArgs:",
-			"\t\t${2:param}: ${4:Description of the parameter.}",
+			"Args:",
+			"\t${2:param}: ${4:Description of the parameter.}",
 			"",
-			"\tReturns:",
-			"\t\t${5:return_type}: ${6:Description of the return value.}",
+			"Returns:",
+			"\t${5:return_type}: ${6:Description of the return value.}",
 			"",
-			"\tRaises:",
-			"\t\t${7:ExceptionType}: ${8:When this exception is raised.}",
-			"\t\"\"\"",
-			"\t$0"
+			"Raises:",
+			"\t${7:ExceptionType}: ${8:When this exception is raised.}",
+			"\"\"\"",
+			"$0"
 		],
 		"description": "descriptive docstrings for class methods"
 	},
 	"document Class": {
 		"prefix": "classdoc",
 		"body": [
-			"\t\"\"\"",
-			"\t${2:Brief description of the class.}",
+			"\"\"\"",
+			"${2:Brief description of the class.}",
 			"",
-			"\tAttributes:",
-			"\t\t${3:attribute}: ${4:Description of the attribute.}",
-			"\t\"\"\"",
-			"\t$0"
+			"Attributes:",
+			"\t${3:attribute}: ${4:Description of the attribute.}",
+			"\"\"\"",
+			"$0"
 		],
 		"description": "descriptive docstrings for Classes"
 	}
