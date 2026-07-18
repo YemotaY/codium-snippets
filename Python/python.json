@@ -1,4 +1,17 @@
 {
+	// Place your snippets for python here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
 	"Open file for reading": {
 		"prefix": "readfile",
 		"body": [
@@ -26,12 +39,11 @@
 			"# -*- coding: utf-8 -*-",
 			"#",
 			"#  $TM_FILENAME",
-			"#  ${2:project}",
 			"#",
-			"#  Created by André Berg on $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE.",
-			"#  Copyright $CURRENT_YEAR Iris VFX. All rights reserved.",
+			"#  Created by YemotaY on $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE.",
+			"#  MIT Licensed, $CURRENT_YEAR. All rights reserved.",
 			"#",
-			"#  andre@irisvfx.com",
+			"#   b59190308@gmail.com",
 			"#",
 			"# pylint: disable-msg=F0401"
 		]
@@ -83,7 +95,7 @@
 			"\tdef __init__(self, ${4:var}):",
 			"\t\tself.${4:var} = ${4:var}",
 			"\tdef __str__(self):",
-			"\t\treturn '${1:name}@{:#x}: {}'.format(id(self), self.${4:var})"
+			"\t\treturn '${1:name}@{:#x}: {}'.format(id(self), self.${4:var})",
 		],
 		"description": "Class definition with doctsring"
 	},
@@ -136,7 +148,7 @@
 			"\treturn self.${1:name}",
 			"@${1:name}.setter",
 			"def ${1:name}(self, value):",
-			"\tself.${1:name} = value"
+			"\tself.${1:name} = value",
 		],
 		"description": "Property getter and setter"
 	},
@@ -350,5 +362,60 @@
 			"\t\t$0"
 		],
 		"description": "Simple class"
+	},
+	"document Function": {
+		"prefix": "defdoc",
+		"body": [
+			"\"\"\"",
+			"${4:Short summary of what the function does.}",
+			"",
+			"Args:",
+			"\t${2:param1}: ${5:Description of the first parameter.}",
+			"\t${3:param2}: ${6:Description of the second parameter.}",
+			"",
+			"Returns:",
+			"\t${7:return_type}: ${8:Description of the return value.}",
+			"",
+			"Raises:",
+			"\t${9:ExceptionType}: ${10:When this exception is raised.}",
+			"",
+			"Example:",
+			"\t${11:result = ${1:function_name}(value1, value2)}",
+			"\"\"\"",
+			"$0"
+		],
+		"description": "descriptive docstrings for Functions"
+	},
+	"document Method": {
+		"prefix": "methoddoc",
+		"body": [
+			"\"\"\"",
+			"${3:Short summary of what the method does.}",
+			"",
+			"Args:",
+			"\t${2:param}: ${4:Description of the parameter.}",
+			"",
+			"Returns:",
+			"\t${5:return_type}: ${6:Description of the return value.}",
+			"",
+			"Raises:",
+			"\t${7:ExceptionType}: ${8:When this exception is raised.}",
+			"\"\"\"",
+			"$0"
+		],
+		"description": "descriptive docstrings for class methods"
+	},
+	"document Class": {
+		"prefix": "classdoc",
+		"body": [
+			"\"\"\"",
+			"${2:Brief description of the class.}",
+			"",
+			"Attributes:",
+			"\t${3:attribute}: ${4:Description of the attribute.}",
+			"\"\"\"",
+			"$0"
+		],
+		"description": "descriptive docstrings for Classes"
 	}
 }
