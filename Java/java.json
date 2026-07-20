@@ -1,0 +1,362 @@
+{
+    "Main": {
+        "prefix": "main",
+        "body": [
+            "public class ${1:Main}",
+            "{",
+            "\tpublic static void main(String[] args)",
+            "\t{",
+            "\t\t$0",
+            "\t}",
+            "}"
+        ],
+        "description": "Main class"
+    },
+
+    "Class": {
+        "prefix": "class",
+        "body": [
+            "public class ${1:ClassName}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Class"
+    },
+
+    "Interface": {
+        "prefix": "interface",
+        "body": [
+            "public interface ${1:InterfaceName}",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Interface"
+    },
+
+    "Enum": {
+        "prefix": "enum",
+        "body": [
+            "public enum ${1:Name}",
+            "{",
+            "\t${2:VALUE1},",
+            "\t${3:VALUE2};",
+            "}"
+        ],
+        "description": "Enum"
+    },
+
+    "Constructor": {
+        "prefix": "ctor",
+        "body": [
+            "public ${1:ClassName}(${2})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Constructor"
+    },
+
+    "Method": {
+        "prefix": "func",
+        "body": [
+            "public ${1:void} ${2:methodName}(${3})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Method"
+    },
+
+    "Static Method": {
+        "prefix": "static",
+        "body": [
+            "public static ${1:void} ${2:methodName}(${3})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Static method"
+    },
+
+    "Private Method": {
+        "prefix": "private",
+        "body": [
+            "private ${1:void} ${2:methodName}(${3})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Private method"
+    },
+
+    "If": {
+        "prefix": "if",
+        "body": [
+            "if (${1:condition})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "If statement"
+    },
+
+    "If Else": {
+        "prefix": "ife",
+        "body": [
+            "if (${1:condition})",
+            "{",
+            "\t$2",
+            "}",
+            "else",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "If else"
+    },
+
+    "For Loop": {
+        "prefix": "for",
+        "body": [
+            "for (int ${1:i} = 0; ${1:i} < ${2:n}; ${1:i}++)",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "For loop"
+    },
+
+    "Enhanced For": {
+        "prefix": "foreach",
+        "body": [
+            "for (${1:Type} ${2:item} : ${3:collection})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "Enhanced for loop"
+    },
+
+    "While": {
+        "prefix": "while",
+        "body": [
+            "while (${1:condition})",
+            "{",
+            "\t$0",
+            "}"
+        ],
+        "description": "While loop"
+    },
+
+    "Do While": {
+        "prefix": "dowhile",
+        "body": [
+            "do",
+            "{",
+            "\t$0",
+            "} while (${1:condition});"
+        ],
+        "description": "Do while loop"
+    },
+
+    "Switch": {
+        "prefix": "switch",
+        "body": [
+            "switch (${1:value})",
+            "{",
+            "\tcase ${2:value}:",
+            "\t\t$3",
+            "\t\tbreak;",
+            "",
+            "\tdefault:",
+            "\t\tbreak;",
+            "}"
+        ],
+        "description": "Switch statement"
+    },
+
+    "Try Catch": {
+        "prefix": "try",
+        "body": [
+            "try",
+            "{",
+            "\t$0",
+            "}",
+            "catch (${1:Exception} e)",
+            "{",
+            "\te.printStackTrace();",
+            "}"
+        ],
+        "description": "Try catch"
+    },
+
+    "Try With Resources": {
+        "prefix": "tryr",
+        "body": [
+            "try (${1:BufferedReader br = new BufferedReader(new FileReader(file))})",
+            "{",
+            "\t$0",
+            "}",
+            "catch (${2:IOException} e)",
+            "{",
+            "\te.printStackTrace();",
+            "}"
+        ],
+        "description": "Try with resources"
+    },
+
+    "Print": {
+        "prefix": "print",
+        "body": [
+            "System.out.print(${1});"
+        ],
+        "description": "Print"
+    },
+
+    "Println": {
+        "prefix": "println",
+        "body": [
+            "System.out.println(${1});"
+        ],
+        "description": "Print line"
+    },
+
+    "Printf": {
+        "prefix": "printf",
+        "body": [
+            "System.out.printf(\"${1}%n\", ${2});"
+        ],
+        "description": "Printf"
+    },
+
+    "Scanner": {
+        "prefix": "scanner",
+        "body": [
+            "Scanner ${1:scanner} = new Scanner(System.in);"
+        ],
+        "description": "Scanner"
+    },
+
+    "ArrayList": {
+        "prefix": "arraylist",
+        "body": [
+            "ArrayList<${1:Type}> ${2:list} = new ArrayList<>();"
+        ],
+        "description": "ArrayList"
+    },
+
+    "HashMap": {
+        "prefix": "hashmap",
+        "body": [
+            "HashMap<${1:Key}, ${2:Value}> ${3:map} = new HashMap<>();"
+        ],
+        "description": "HashMap"
+    },
+
+    "HashSet": {
+        "prefix": "hashset",
+        "body": [
+            "HashSet<${1:Type}> ${2:set} = new HashSet<>();"
+        ],
+        "description": "HashSet"
+    },
+
+    "Read File": {
+        "prefix": "readfile",
+        "body": [
+            "BufferedReader br = new BufferedReader(new FileReader(${1:\"file.txt\"}));",
+            "String line;",
+            "while ((line = br.readLine()) != null)",
+            "{",
+            "\t$0",
+            "}",
+            "br.close();"
+        ],
+        "description": "Read file"
+    },
+
+    "Write File": {
+        "prefix": "writefile",
+        "body": [
+            "BufferedWriter bw = new BufferedWriter(new FileWriter(${1:\"file.txt\"}));",
+            "bw.write(${2:text});",
+            "bw.close();"
+        ],
+        "description": "Write file"
+    },
+
+    "Throw": {
+        "prefix": "throw",
+        "body": [
+            "throw new ${1:IllegalArgumentException}(${2:\"message\"});"
+        ],
+        "description": "Throw exception"
+    },
+
+    "Assert": {
+        "prefix": "assert",
+        "body": [
+            "assert ${1:condition};"
+        ],
+        "description": "Assert"
+    },
+
+    "Package": {
+        "prefix": "package",
+        "body": [
+            "package ${1:package};"
+        ],
+        "description": "Package"
+    },
+
+    "Import": {
+        "prefix": "import",
+        "body": [
+            "import ${1:java.util.*};"
+        ],
+        "description": "Import"
+    },
+
+    "Common Imports": {
+        "prefix": "incstd",
+        "body": [
+            "import java.util.*;",
+            "import java.io.*;",
+            "import java.nio.file.*;",
+            "import java.util.stream.*;"
+        ],
+        "description": "Common imports"
+    },
+
+    "TODO": {
+        "prefix": "todo",
+        "body": [
+            "// TODO(${1:name}): ${2:description}"
+        ],
+        "description": "TODO comment"
+    },
+
+    "Getter": {
+        "prefix": "getter",
+        "body": [
+            "public ${1:Type} get${2:Name}()",
+            "{",
+            "\treturn ${3:field};",
+            "}"
+        ],
+        "description": "Getter"
+    },
+
+    "Setter": {
+        "prefix": "setter",
+        "body": [
+            "public void set${1:Name}(${2:Type} ${3:value})",
+            "{",
+            "\tthis.${4:field} = ${3:value};",
+            "}"
+        ],
+        "description": "Setter"
+    }
+}
