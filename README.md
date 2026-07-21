@@ -1,6 +1,6 @@
 # Codium Snippets
 
-Custom code snippets for [VS Codium](https://vscodium.com/) covering **C** and **Python**.
+Custom code snippets for [VS Codium](https://vscodium.com/) covering **C** | **Csharp** | **Java** | **Python**.
 
 Type a snippet's **prefix** in an editor of the matching language, then press `Tab` or `Enter` to expand it. Placeholders (`$1`, `$2`, …) let you tab between the fields you need to fill in.
 
