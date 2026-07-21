@@ -95,3 +95,91 @@ Source: [Python/python.json](Python/python.json)
 | `ifmain` | Main Guard | `if __name__ == "__main__":` guard |
 | `deft` | Type Hint Function | Function with type-hinted params and return |
 | `class` | Class | Simple class with `__init__` |
+
+## C# Snippets
+
+Source: [CSharp/csharp.json](CSharp/csharp.json)
+
+| Prefix | Name | Description |
+| --- | --- | --- |
+| `main` | Main | Main method |
+| `class` | Class | Class definition |
+| `struct` | Struct | Struct definition |
+| `interface` | Interface | Interface definition |
+| `enum` | Enum | Enum |
+| `record` | Record | Record |
+| `func` | Method | Method |
+| `static` | Static Method | Static method |
+| `prop` | Property | Auto property |
+| `propr` | Readonly Property | Readonly property |
+| `ctor` | Constructor | Constructor |
+| `if` | If | If statement |
+| `ife` | If Else | If else |
+| `switch` | Switch | Switch statement |
+| `switche` | Switch Expression | Switch expression |
+| `for` | For | For loop |
+| `foreach` | Foreach | Foreach loop |
+| `while` | While | While loop |
+| `dowhile` | Do While | Do while |
+| `try` | Try Catch | Try catch |
+| `tryf` | Try Catch Finally | Try catch finally |
+| `using` | Using | Using declaration |
+| `cw` | Console WriteLine | Console.WriteLine |
+| `cr` | Console ReadLine | Console.ReadLine |
+| `parse` | Parse Int | Parse int |
+| `tryparse` | TryParse Int | TryParse int |
+| `list` | List | Generic List |
+| `dict` | Dictionary | Dictionary |
+| `lambda` | Lambda | Lambda expression |
+| `where` | LINQ Where | LINQ Where |
+| `select` | LINQ Select | LINQ Select |
+| `task` | Task | Async Task |
+| `taskt` | Task<T> | Async Task<T> |
+| `await` | Await | Await |
+| `namespace` | Namespace | File-scoped namespace |
+| `region` | Region | Region |
+| `const` | Constant | Constant |
+| `readonly` | Readonly Field | Readonly field |
+| `field` | Field | Field |
+| `todo` | TODO | TODO comment |
+
+## Java Snippets
+
+Source: [Java/java.json](Java/java.json)
+
+| Prefix | Name | Description |
+| --- | --- | --- |
+| `main` | Main | Main class with `public static void main(String[] args)` |
+| `class` | Class | Public class declaration |
+| `interface` | Interface | Public interface declaration |
+| `enum` | Enum | Enum declaration with sample values |
+| `ctor` | Constructor | Public constructor |
+| `func` | Method | Public method |
+| `static` | Static Method | Public static method |
+| `private` | Private Method | Private method |
+| `if` | If | `if` statement |
+| `ife` | If Else | `if` / `else` statement |
+| `for` | For Loop | Counted `for` loop |
+| `foreach` | Enhanced For | Enhanced `for-each` loop |
+| `while` | While | `while` loop |
+| `dowhile` | Do While | `do` / `while` loop |
+| `switch` | Switch | `switch` statement with `case` and `default` |
+| `try` | Try Catch | `try` / `catch` block |
+| `tryr` | Try With Resources | `try`-with-resources block |
+| `print` | Print | `System.out.print()` |
+| `println` | Println | `System.out.println()` |
+| `printf` | Printf | `System.out.printf()` |
+| `scanner` | Scanner | Create a `Scanner` for standard input |
+| `arraylist` | ArrayList | Create an `ArrayList` |
+| `hashmap` | HashMap | Create a `HashMap` |
+| `hashset` | HashSet | Create a `HashSet` |
+| `readfile` | Read File | Read a file using `BufferedReader` |
+| `writefile` | Write File | Write a file using `BufferedWriter` |
+| `throw` | Throw | Throw an exception |
+| `assert` | Assert | `assert` statement |
+| `package` | Package | Package declaration |
+| `import` | Import | Import a package or class |
+| `incstd` | Common Imports | Import common Java utility, I/O, NIO, and Stream packages |
+| `todo` | TODO | `// TODO(name): description` comment |
+| `getter` | Getter | Generate a getter method |
+| `setter` | Setter | Generate a setter method |
