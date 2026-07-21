@@ -11,7 +11,7 @@ Copy the files into your Codium user snippets folder:
 - **Linux/macOS:** `~/.config/VSCodium/User/snippets/`
 - **Windows:** `%APPDATA%\VSCodium\User\snippets\`
 
-Place `c.json` as `c.json` and `python.json` as `python.json` (they are language-scoped by file name).
+Place `c.json` as `c.json` and `python.json` as `python.json` and so on...
 
 ---
 
