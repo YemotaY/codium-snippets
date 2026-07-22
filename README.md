@@ -53,7 +53,7 @@ Source: [C/c.json](C/c.json)
 
 ## Python Snippets
 
-Source: [Python/python.json](Python/python.json)
+Source: [python/python.json](Python/python.json)
 
 | Prefix | Name | Description |
 | --- | --- | --- |
@@ -98,7 +98,7 @@ Source: [Python/python.json](Python/python.json)
 
 ## C# Snippets
 
-Source: [CSharp/csharp.json](CSharp/csharp.json)
+Source: [chharp/csharp.json](CSharp/csharp.json)
 
 | Prefix | Name | Description |
 | --- | --- | --- |
@@ -186,4 +186,52 @@ Source: [java/java.json](Java/java.json)
 
 ## JavaScript Snippets
 
-Source: [JS/javascript.json]JS/javascript.json
+Source: [JS/javascript.json](JS/javascript.json)
+
+|Prefix	| Name	| Description
+| --- | --- | --- |
+|`readfile` |	Read File | (Node.js)	Read file synchronously
+|`writefile` |	Write File | (Node.js)	Write file synchronously
+|`fileheader`	| File Header |	File header comment
+|`main` |	Main Function |	Main entry point
+|`func` |	Function |	Function declaration
+|`afunc` |	Arrow Function |	Arrow function
+|`async` |	Async Function |	Async function
+|`asynca` |	Async Arrow Function |	Async arrow function
+|`class` |	Class |	Class skeleton
+|`class1` |	Class with toString |	Class with constructor and toString
+|`prop` |	Getter Setter |	Getter and Setter
+|`if` |	If |	If statement
+|`ife` |	If Else |	If else
+|`ifel` |	If Else If |	If else if
+|`for` |	For Loop |	For loop
+|`forof` |	For Of |	For...of loop
+|`forin` |	For In |	For...in loop
+|`while` |	While |	While loop
+|`switch` |	Switch |	Switch statement
+|`try` |	Try Catch |	Try catch
+|`tryf` |	Try Catch Finally |	Try catch finally
+|`promise` |	Promise |	Promise skeleton
+|`fetch` |	Fetch |	Fetch API
+|`log` |	Console Log |	Console log
+|`table` |	Console Table |	Console table
+|`pvar` |	Console Variable |	Print variable
+|`tmpl` |	Template String |	Template literal
+|`imp` |	Import |	ES Module import
+|`impn` |	Named Import |	Named import
+|`exp` |	Export Default |	Default export
+|`expn` |	Export Named |	Named export
+|`ret` |	Return |	Return statement
+|`map` |	Array Map |	Array map
+|`filter`	Array | Filter	|Array filter
+|`reduce`	Array | Reduce	|Array reduce
+|`foreach` |	ForEach |	Array forEach
+|`desobj` |	Object Destructure |	Object destructuring
+|`desarr`	Array | Destructure |	Array destructuring
+|`qs` |	DOM Query |	querySelector
+|`qsa` |	Query All |	querySelectorAll
+|`listen`	| Event Listener | Add event listener
+|`timeout` |	Set Timeout |	setTimeout
+|`interval` |	Set Interval |	setInterval
+|`funcdoc` |	JSDoc Function |	JSDoc function
+|`classdoc` |	JSDoc Class |	JSDoc class
