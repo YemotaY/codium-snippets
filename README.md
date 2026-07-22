@@ -145,7 +145,7 @@ Source: [CSharp/csharp.json](CSharp/csharp.json)
 
 ## Java Snippets
 
-Source: [Java/java.json](Java/java.json)
+Source: [java/java.json](Java/java.json)
 
 | Prefix | Name | Description |
 | --- | --- | --- |
@@ -183,3 +183,7 @@ Source: [Java/java.json](Java/java.json)
 | `todo` | TODO | `// TODO(name): description` comment |
 | `getter` | Getter | Generate a getter method |
 | `setter` | Setter | Generate a setter method |
+
+## JavaScript Snippets
+
+Source: [JS/javascript.json]JS/javascript.json
