@@ -1,0 +1,461 @@
+{
+  "Read File (Node.js)": {
+    "prefix": "readfile",
+    "body": [
+      "const fs = require('fs');",
+      "const text = fs.readFileSync(${1:'file.txt'}, 'utf8');"
+    ],
+    "description": "Read file synchronously"
+  },
+
+  "Write File (Node.js)": {
+    "prefix": "writefile",
+    "body": [
+      "const fs = require('fs');",
+      "fs.writeFileSync(${1:'file.txt'}, ${2:data});"
+    ],
+    "description": "Write file synchronously"
+  },
+
+  "File Header": {
+    "prefix": "fileheader",
+    "body": [
+      "/**",
+      " * ${TM_FILENAME}",
+      " *",
+      " * Created by ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      " */"
+    ],
+    "description": "File header comment"
+  },
+
+  "Main Function": {
+    "prefix": "main",
+    "body": [
+      "function main() {",
+      "\t$0",
+      "}",
+      "",
+      "main();"
+    ],
+    "description": "Main entry point"
+  },
+
+  "Function": {
+    "prefix": "func",
+    "body": [
+      "function ${1:name}(${2:args}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Function declaration"
+  },
+
+  "Arrow Function": {
+    "prefix": "afunc",
+    "body": [
+      "const ${1:name} = (${2:args}) => {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Arrow function"
+  },
+
+  "Async Function": {
+    "prefix": "async",
+    "body": [
+      "async function ${1:name}(${2:args}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Async function"
+  },
+
+  "Async Arrow Function": {
+    "prefix": "asynca",
+    "body": [
+      "const ${1:name} = async (${2:args}) => {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Async arrow function"
+  },
+
+  "Class": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName} {",
+      "\tconstructor(${2:args}) {",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Class skeleton"
+  },
+
+  "Class with toString": {
+    "prefix": "class1",
+    "body": [
+      "class ${1:ClassName} {",
+      "\tconstructor(${2:value}) {",
+      "\t\tthis.${2:value} = ${2:value};",
+      "\t}",
+      "",
+      "\ttoString() {",
+      "\t\treturn `${1:ClassName}: ${this.${2:value}}`;",
+      "\t}",
+      "}"
+    ],
+    "description": "Class with constructor and toString"
+  },
+
+  "Getter Setter": {
+    "prefix": "prop",
+    "body": [
+      "get ${1:name}() {",
+      "\treturn this._${1:name};",
+      "}",
+      "",
+      "set ${1:name}(value) {",
+      "\tthis._${1:name} = value;",
+      "}"
+    ],
+    "description": "Getter and Setter"
+  },
+
+  "If": {
+    "prefix": "if",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If statement"
+  },
+
+  "If Else": {
+    "prefix": "ife",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$2",
+      "} else {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If else"
+  },
+
+  "If Else If": {
+    "prefix": "ifel",
+    "body": [
+      "if (${1:condition}) {",
+      "\t$2",
+      "} else if (${3:condition}) {",
+      "\t$4",
+      "} else {",
+      "\t$0",
+      "}"
+    ],
+    "description": "If else if"
+  },
+
+  "For Loop": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "For loop"
+  },
+
+  "For Of": {
+    "prefix": "forof",
+    "body": [
+      "for (const ${1:item} of ${2:array}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "For...of loop"
+  },
+
+  "For In": {
+    "prefix": "forin",
+    "body": [
+      "for (const ${1:key} in ${2:object}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "For...in loop"
+  },
+
+  "While": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "While loop"
+  },
+
+  "Switch": {
+    "prefix": "switch",
+    "body": [
+      "switch (${1:value}) {",
+      "\tcase ${2:case}:",
+      "\t\t$0",
+      "\t\tbreak;",
+      "",
+      "\tdefault:",
+      "\t\tbreak;",
+      "}"
+    ],
+    "description": "Switch statement"
+  },
+
+  "Try Catch": {
+    "prefix": "try",
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (err) {",
+      "\tconsole.error(err);",
+      "}"
+    ],
+    "description": "Try catch"
+  },
+
+  "Try Catch Finally": {
+    "prefix": "tryf",
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (err) {",
+      "\tconsole.error(err);",
+      "} finally {",
+      "\t$2",
+      "}"
+    ],
+    "description": "Try catch finally"
+  },
+
+  "Promise": {
+    "prefix": "promise",
+    "body": [
+      "return new Promise((resolve, reject) => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Promise skeleton"
+  },
+
+  "Fetch": {
+    "prefix": "fetch",
+    "body": [
+      "fetch(${1:url})",
+      "\t.then(res => res.json())",
+      "\t.then(data => {",
+      "\t\t$0",
+      "\t})",
+      "\t.catch(console.error);"
+    ],
+    "description": "Fetch API"
+  },
+
+  "Console Log": {
+    "prefix": "log",
+    "body": [
+      "console.log(${1:value});"
+    ],
+    "description": "Console log"
+  },
+
+  "Console Table": {
+    "prefix": "table",
+    "body": [
+      "console.table(${1:data});"
+    ],
+    "description": "Console table"
+  },
+
+  "Console Variable": {
+    "prefix": "pvar",
+    "body": [
+      "console.log('${1:variable}:', ${1:variable});"
+    ],
+    "description": "Print variable"
+  },
+
+  "Template String": {
+    "prefix": "tmpl",
+    "body": [
+      "`${1:text} ${2:value}`"
+    ],
+    "description": "Template literal"
+  },
+
+  "Import": {
+    "prefix": "imp",
+    "body": [
+      "import ${1:module} from '${2:path}';"
+    ],
+    "description": "ES Module import"
+  },
+
+  "Named Import": {
+    "prefix": "impn",
+    "body": [
+      "import { ${1:name} } from '${2:path}';"
+    ],
+    "description": "Named import"
+  },
+
+  "Export Default": {
+    "prefix": "exp",
+    "body": [
+      "export default ${1:name};"
+    ],
+    "description": "Default export"
+  },
+
+  "Export Named": {
+    "prefix": "expn",
+    "body": [
+      "export { ${1:name} };"
+    ],
+    "description": "Named export"
+  },
+
+  "Return": {
+    "prefix": "ret",
+    "body": [
+      "return ${1:value};"
+    ],
+    "description": "Return statement"
+  },
+
+  "Array Map": {
+    "prefix": "map",
+    "body": [
+      "${1:array}.map((${2:item}) => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Array map"
+  },
+
+  "Array Filter": {
+    "prefix": "filter",
+    "body": [
+      "${1:array}.filter((${2:item}) => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Array filter"
+  },
+
+  "Array Reduce": {
+    "prefix": "reduce",
+    "body": [
+      "${1:array}.reduce((${2:acc}, ${3:item}) => {",
+      "\t$0",
+      "}, ${4:0});"
+    ],
+    "description": "Array reduce"
+  },
+
+  "ForEach": {
+    "prefix": "foreach",
+    "body": [
+      "${1:array}.forEach((${2:item}) => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Array forEach"
+  },
+
+  "Object Destructure": {
+    "prefix": "desobj",
+    "body": [
+      "const { ${1:prop} } = ${2:object};"
+    ],
+    "description": "Object destructuring"
+  },
+
+  "Array Destructure": {
+    "prefix": "desarr",
+    "body": [
+      "const [${1:first}] = ${2:array};"
+    ],
+    "description": "Array destructuring"
+  },
+
+  "DOM Query": {
+    "prefix": "qs",
+    "body": [
+      "const ${1:element} = document.querySelector('${2:selector}');"
+    ],
+    "description": "querySelector"
+  },
+
+  "Query All": {
+    "prefix": "qsa",
+    "body": [
+      "const ${1:elements} = document.querySelectorAll('${2:selector}');"
+    ],
+    "description": "querySelectorAll"
+  },
+
+  "Event Listener": {
+    "prefix": "listen",
+    "body": [
+      "${1:element}.addEventListener('${2:click}', (event) => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Add event listener"
+  },
+
+  "Set Timeout": {
+    "prefix": "timeout",
+    "body": [
+      "setTimeout(() => {",
+      "\t$0",
+      "}, ${1:1000});"
+    ],
+    "description": "setTimeout"
+  },
+
+  "Set Interval": {
+    "prefix": "interval",
+    "body": [
+      "setInterval(() => {",
+      "\t$0",
+      "}, ${1:1000});"
+    ],
+    "description": "setInterval"
+  },
+
+  "JSDoc Function": {
+    "prefix": "funcdoc",
+    "body": [
+      "/**",
+      " * ${1:Description}",
+      " * @param {${2:type}} ${3:param}",
+      " * @returns {${4:type}}",
+      " */"
+    ],
+    "description": "JSDoc function"
+  },
+
+  "JSDoc Class": {
+    "prefix": "classdoc",
+    "body": [
+      "/**",
+      " * ${1:Class description}",
+      " */"
+    ],
+    "description": "JSDoc class"
+  }
+}
